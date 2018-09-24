@@ -3,11 +3,15 @@ default: &default
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
   timeout: 5000
   username: root
-  password: Ani@1990!
+  password:
   host: 127.0.0.1
   port: 3306
 
 
 development:
   <<: *default
-  database: <%= blog
+  database: blog_development
+
+test:
+  <<: *default
+  database: blog_test

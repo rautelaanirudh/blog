@@ -1,9 +1,9 @@
 pipeline {
     agent any
     stages {
-        stage('Example') {
+        stage('qa') {
             steps {
-                echo 'Test Cases'
+                sh 'rspec spec/models/topic_spec.rb'
             }
         }
     }
