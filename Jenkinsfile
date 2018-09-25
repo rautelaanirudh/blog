@@ -3,8 +3,7 @@ pipeline {
     stages {
         stage('qa') {
             steps {
-                echo "Running ${env.BUILD_ID} on ${env.JENKINS_URL}"
-                echo "${env}"
+                echo "${env.RUBY_VERSION}"
                 sh ''' #!/bin/bash -l
                     source ~/.bash_profile
                     rvm use 2.5.1@blog
