@@ -4,6 +4,7 @@ pipeline {
         stage('qa') {
             steps {
                 sh ''' #!/bin/bash -l
+                    source ~/.bash_profile
                     rvm use 2.5.1@blog
                     bundle install
                     rails db:create
