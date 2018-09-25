@@ -2,11 +2,8 @@ pipeline {
     agent any
     stages {
         stage('qa') {
-            environment {
-                env.RUBY_VERSION = "${env.RUBY_VERSION}"
-            }
             steps {
-                echo "${RUBY_VERSION}"
+                echo "${RUBY_VERSION}-----${GEMSET}"
                 sh ''' #!/bin/bash -l
                     source ~/.bash_profile
                     rvm use 2.5.1@blog
