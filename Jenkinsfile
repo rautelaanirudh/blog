@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('qa') {
             environment {
-                RUBY_VERSION = ${env.RUBY_VERSION}
+                RUBY_VERSION = "${env.RUBY_VERSION}"
             }
             steps {
                 echo "${RUBY_VERSION}"
