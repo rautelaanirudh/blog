@@ -15,8 +15,8 @@ pipeline {
         }
     }
     post { 
-        always { 
-            echo 'Test Deployment'
+        success { 
+            echo 'Test Deployment Successful'
         }
     }
 }
