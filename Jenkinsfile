@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('qa') {
             steps {
-                bash ''' #!/bin/bash
+                sh ''' #!/bin/bash
                     source ~/.bash_profile
                     rvm use 2.5.1@blog
                     bundle install
