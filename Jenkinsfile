@@ -3,8 +3,7 @@ pipeline {
     stages {
         stage('qa') {
             steps {
-                sh '''
-                    #!/bin/bash
+                sh ''' #!/bin/bash
                     [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
                     rvm use 2.5.1@blog
                     bundle install
